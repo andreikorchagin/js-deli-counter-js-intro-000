@@ -1,28 +1,26 @@
-function takeANumber(arr, name){
+function takeANumber(arr, name) {
   arr.push(name);
   return `Welcome ${name}, you are number ${arr.length} in line.`;
 }
 
-function nowServing(arr){
-  if(arr.length){
+function nowServing(arr) {
+  if (arr.length) {
     var curr = arr.shift();
     return `Now serving ${curr}.`;
-  }
-  else {
+  } else {
     return "There is nobody waiting to be served!";
   }
 }
 
-function currentLine(arr){
-  if(arr.length){
+function currentLine(arr) {
+  if (arr.length) {
     var lineStr = "The line is currently:"
-    for(var i = 0; i<arr.length; i++){
-      lineStr .= ` ${i + 1}. ${arr[i]},`
+    for (var i = 0; i < arr.length; i++) {
+      lineStr. = ` ${i + 1}. ${arr[i]},`
     }
     lineStr = lineStr.substring(0, lineStr.length - 1);
     return lineStr;
-  }
-  else {
+  } else {
     return "The line is currently empty.";
   }
 }
